@@ -11,19 +11,22 @@ public class LoginPage {
         this.driver=driver;
     }
 
-    private void setUserName(String userNameValue){
+    private void setUserName(String userNameValue) throws InterruptedException {
         driver.findElement(userName).sendKeys(userNameValue);
+        Thread.sleep(5000);
     }
 
-    private void setPassword(String passwordValue){
+    private void setPassword(String passwordValue) throws InterruptedException {
         driver.findElement(password).sendKeys(passwordValue);
+        Thread.sleep(5000);
     }
 
-    private void clickLoginButton(){
+    private void clickLoginButton() throws InterruptedException {
         driver.findElement(loginButton).click();
+        Thread.sleep(5000);
     }
 
-    public void loginToInst(String username, String password){
+    public void loginToInst(String username, String password) throws InterruptedException {
         this.setUserName(username);
         this.setPassword(password);
         this.clickLoginButton();
