@@ -10,9 +10,9 @@ public class LoginPageTest {
     @BeforeTest
     public void setup(){
         driver = new ChromeDriver();
+        driver.manage().window().maximize();
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         driver.get("https://www.instagram.com/");
-        driver.manage().window().maximize();
     }
 
     @Test
