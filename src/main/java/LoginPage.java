@@ -12,18 +12,18 @@ public class LoginPage {
     }
 
     private void setUserName(String userNameValue) throws InterruptedException {
-        driver.findElement(userName).sendKeys(userNameValue);
         Thread.sleep(5000);
+        driver.findElement(userName).sendKeys(userNameValue);
     }
 
     private void setPassword(String passwordValue) throws InterruptedException {
-        driver.findElement(password).sendKeys(passwordValue);
         Thread.sleep(5000);
+        driver.findElement(password).sendKeys(passwordValue);
     }
 
     private void clickLoginButton() throws InterruptedException {
-        driver.findElement(loginButton).click();
         Thread.sleep(5000);
+        driver.findElement(loginButton).click();
     }
 
     public void loginToInst(String username, String password) throws InterruptedException {

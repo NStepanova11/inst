@@ -17,7 +17,7 @@ public class LoginPageTest {
     }
 
     @Test
-    public void loginTest(){
+    public void loginTest() throws InterruptedException {
         loginPage = new LoginPage(driver);
         loginPage.loginToInst("+79877252367", "samsung1234");
     }
