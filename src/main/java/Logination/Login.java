@@ -1,28 +1,28 @@
+package Logination;
+
+import Pages.HomePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class LoginPage {
+public class Login {
     WebDriver driver;
     By userName = By.name("username");
     By password = By.name("password");
     By loginButton = By.xpath(".//*[text()='Войти']");
 
-    public LoginPage(WebDriver driver){
+    public Login(WebDriver driver){
         this.driver=driver;
     }
 
     private void setUserName(String userNameValue) throws InterruptedException {
-        Thread.sleep(5000);
         driver.findElement(userName).sendKeys(userNameValue);
     }
 
     private void setPassword(String passwordValue) throws InterruptedException {
-        Thread.sleep(5000);
         driver.findElement(password).sendKeys(passwordValue);
     }
 
     private void clickLoginButton() throws InterruptedException {
-        Thread.sleep(5000);
         driver.findElement(loginButton).click();
     }
 
@@ -30,5 +30,8 @@ public class LoginPage {
         this.setUserName(username);
         this.setPassword(password);
         this.clickLoginButton();
+
+        HomePage homePage = new HomePage(driver);
+        homePage.clickByNotNowBtn();
     }
 }
