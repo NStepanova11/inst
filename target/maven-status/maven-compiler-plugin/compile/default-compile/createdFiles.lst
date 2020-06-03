@@ -1,0 +1,5 @@
+Logination\Login.class
+Pages\HomePage.class
+Logination\Cookies\CookieReader.class
+Logination\Cookies\CookieWriter.class
+Logination\Cookies\CookiesHandler.class
